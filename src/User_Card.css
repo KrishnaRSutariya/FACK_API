@@ -1,0 +1,19 @@
+.user_card {
+    background-color: white;
+    font-family: Roboto, sans-serif;
+    padding: 50px 0px;
+    text-align: center;
+    word-wrap: break-word;
+}
+.user_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.vertical_center
+{
+    vertical-align: middle;
+}

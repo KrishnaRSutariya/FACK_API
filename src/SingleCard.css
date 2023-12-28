@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.single-body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #121212;
+}
+
+.single-container {
+  position: relative;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #c48e82;
+  /* Need to play around with z-index more with backgrounds*/
+  z-index: 0;
+}
+
+.single-container .card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 100px 0;
+}
+
+.single-container .card:nth-child(odd) {
+  flex-direction: row;
+}
+
+.single-container .card:nth-child(even) {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.single-container .card .imgBx {
+  position: relative;
+  left: 25px;
+  width: 400px;
+  height: 400px;
+  background: #fff;
+  z-index: 1;
+}
+.single-container .card .contentBx h3
+{
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.single-container .card .contentBx h3 .star
+{
+  width: 75%;
+}
+.single-container .card .contentBx h6
+{
+  color: #fff;
+  text-align: end;
+  text-transform: uppercase;
+}
+
+.single-container .card:nth-child(even) .imgBx {
+  left: -25px;
+}
+
+.single-container .card .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.single-container .card .contentBx {
+  position: relative;
+  right: 25px;
+  width: 400px;
+  height: 400px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 60px 20px 100px;
+}
+
+.single-container .card:nth-child(even) .contentBx {
+  right: -25px;
+  padding: 20px 100px 20px 60px;
+}
+
+.single-container .card .contentBx:before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  background: #000;
+  z-index: -1;
+}
+
+.single-container .card .contentBx h2 {
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  max-height: 75px;
+  overflow: hidden;
+}
+
+.single-container .card .contentBx p {
+  margin-top: 10px;
+  color: #fff;
+  text-align: justify;
+  text-transform: capitalize;
+  max-height: 100px;
+  overflow: hidden;
+}
+
+.single-container .card .contentBx a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid #fff;
+  font-weight: bold;
+  letter-spacing: .5px;
+  transition: .3s;
+}
+.single-container .card .contentBx a:hover
+{
+  transition: .3s;
+  color: #c48e82;
+  border-color: #c48e82;
+  transform: scale(1.1);
+}
+
+.single-container .card .contentBx .content
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@media (max-width: 1000px) {
+  .single-container .card {
+    flex-direction: column;
+    max-width: 350px;
+    margin: 25px 25px;
+  }
+  
+  .single-container .card .imgBx {
+    width: 100%;
+    height: 250px;
+    left: 0;
+  }
+  
+  .single-container .card .contentBx {
+    width: 100%;
+    height: auto;
+    right: 0;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .single-container .card .contentBx:before {
+    top: 0;
+    bottom: 0;
+  }
+  
+  .single-container .card:nth-child(even) .imgBx {
+    left: 0;
+  }
+  
+  .single-container .card:nth-child(even) .contentBx {
+    right: 0;
+    padding: 30px;
+  }
+}
